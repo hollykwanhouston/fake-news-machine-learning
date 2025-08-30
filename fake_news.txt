@@ -1,0 +1,188 @@
+Mitigating the Proliferation of Fake News on Social Media with Machine Learning Algorithms
+
+Countless atrocities and heinous crimes have been perpetrated and committed by career criminals since the beginning of the World Wide Web. Due to the ubiquitous influence of social media, the proliferation of fake news has extended from the conventional methods of email spamming and phishing in the early days of the World Wide Web to the proliferation of fake news on social media platforms such as Facebook and Twitter over the last few years [19].
+
+These modern forms of spam have instigated potentially negative and irreversible impacts on the global political and economic landscape; thus, it is imperative to immediately implement an optimal machine learning solution to tackle the rapid diffusion of fake news on social media.
+
+Machine learning algorithms are validated on three datasets: *FacebookData*, *PolitiFactData*, and *BuzzFeedData* [11]. The content-based (CB) method has been one of the most common approaches to differentiate *fake news* from real news for numerous years [1, 6].
+
+With the advent of social media, career criminals could bypass the content-based (CB) method of analyzing content-based attributes. Thus, criminals could carefully conceal certain content and deliberately distribute descriptions using dishonest and deceptive means.
+
+It is highly improbable that the standalone content-based (CB) method will be sufficient to stop the spread of fake news; hence, it is crucial to develop novel solutions to analyze additional auxiliary information such as the social characteristics, signals, and relationships of the users and posts [1, 4]. The social signals of sharing or liking posts can be used to evaluate the trustworthiness of the news in the rumor veracity classification system [4].
+
+Social-based methods using the logistic regression (LR) method and the harmonic boolean label crowdsourcing (HC) algorithm can discern the difference between real political news with hyperpartisan leanings and malicious hoaxes. Furthermore, these social-based methods can robustly handle the cold-start situation in which users have zero records with collaborative filtering, which are crucial in the development of hybrid recommender systems [1, 3].
+
+A threshold, λ, determines when to apply the logistic regression (LR) method or the harmonic boolean label crowdsourcing (HC) algorithm instead of the content-based (CB) method; the content-based (CB) method is used when the number of likes is less than the threshold λ, whereas the social-based method is used when the number of likes is greater than or equal to the threshold λ [1, 4].
+
+## METHODOLOGY
+
+### The Content-Based Method
+
+The content-based (CB) method is a data representation and categorization method that analyzes the *count* and *frequency* of characters, words, and sentences. For instance, the *count* and *frequency* of words are *linguistic* and *syntactic* features for the content-based (CB) algorithm. The bag-of-words algorithm evaluated the n-grams, and the part-of-speech (POS) tagging algorithm analyzed the *word frequency* feature in each individual POS tag [2, 17, 18].
+
+Moreover, fake news can be correctly classified by analyzing *domain-specific linguistic* features, such as quotes, external links, and graphs [4]. Fake texts, images, or videos have often *misled* social media users to evoke intense emotional feelings and reactions from affected audiences.
+
+### The Social-Based Methods
+
+The logistic regression (LR) method provides an optimal solution for performing binary classification to identify hoaxes [1, 4]. There are several advantages to implementing the logistic regression (LR) method.
+
+The logistic regression (LR) method is a probabilistic classifier that is apt to manage datasets with sizeably large sets of social features and resolve the issues of error-driven learning by applying regularization to correct any possible overfitting issues [4].
+
+One of the drawbacks of the logistic regression (LR) method is that there are inconsistencies when social media users share the same social signals on the same posts. This can potentially compromise the accuracy, as the algorithm is based on the weight of each user in the training set [3]. When the logistic regression (LR) method cannot learn from that individual social media user, the harmonic boolean label crowdsourcing (HC) algorithm can rectify this particular problem [1, 3].
+
+The harmonic boolean label crowdsourcing (HC) algorithm is a binary classification algorithm that classifies hoaxes based on the crowdsourcing boolean labels of true and false, which are often represented as 1 and 0, or 1 and -1 [3]. The standard boolean label crowdsourcing algorithm was designed for scenarios in which humans are prompted to make truthful statements instead of falsifying records.
+
+The harmonic boolean label crowdsourcing (HC) algorithm modifies the standard boolean label crowdsourcing algorithm by incorporating the KOS algorithm. This change is critical and relevant since the standard boolean label crowdsourcing algorithm does not contain learning sets that resolve the issue of *fake news* attracting and capturing more likes than real news from social media users [5].
+
+The harmonic boolean label crowdsourcing (HC) algorithm [3, 5] addresses cases where fake news attracts more likes than real news. Users (U), items (I), and answers (A) form a bipartite graph E ⊆ U × I, where edges store social signals. The algorithm iterates over users and items in this graph.
+
+### Combining Social-Based and Content-Based Methods
+
+There are two methods for combining the content-based (CB) method with social-based methods. The first method, HC-CB-λH, selects either the harmonic boolean label crowdsourcing (HC) algorithm or the content-based (CB) method, depending on the value of the threshold λ [1]. The second method, LR-CB-λL, selects either the logistic regression (LR) algorithm or the content-based (CB) method depending on the value of the threshold λ [1].
+
+For instance, the HC-CB-3 method is used when there are less than or equal to 2 social signals, and harmonic boolean label crowdsourcing (HC) methods are used when there are greater than or equal to three social signals; the LR-CB-4 method is used when there are less than or equal to 3 social signals, and the logistic regression (LR) method is used when there are greater than or equal to four social signals. It is concluded that cross-validation with 50 iterations demonstrated that the HC-CB-3 method is the most accurate method for the *FacebookData* dataset [1]. The HC-CB-3 method has relatively high accuracy, precision, recall, and F1 scores for the FacebookData dataset when the size of the training set is as small as 0.100 of the original dataset [1].
+
+## THE ISSUES OF FAKE NEWS DETECTION ALGORITHMS
+
+Social media platforms serve as data dissemination agents that convey crucial communication and coordinate endeavors pertaining to disasters and catastrophes. Despite those positive aspects of social media, criminals had succeeded in propagating fake news during critical events such as the Boston Marathon bombing or the United States presidential elections [8, 9].
+
+Malicious content and tweets were rapidly disseminated over the internet after an improvised explosive device (IED) was detonated at the Boston Marathon in 2013 [9]. It is vital to contain the spread of *fake news* as a minuscule amount of misinformation could drastically impact the socio-economic outlook for ourselves and our posterity and "severely jeopardizes the veracity of online content" [20].
+
+Career criminals have propagated fake news for the exploitation of social events such as the United States presidential election in 2016 [4, 8]. The outcome of the United States presidential election was substantially influenced by the circulation of factually incorrect information concerning the political stances and public policies of presidential candidates [7, 8].
+
+Social-based methods are based on social features such as the age of the social media user, the number of respective followers, and the number of published posts, taken individually or in aggregate. Other important features are the reactions and stances toward posts; those can be used to gauge the level of credibility of published news, as social media users are inclined to express their respective opinions and emotions toward news of a particular nature [4].
+
+Network-based features [4] are attributes used to detect *fake news*. For instance, the *stance*, *friendship*, and *diffusion* networks evaluate the *relationship* in a graph.
+
+For the *stance networks* [4], the vertices represent posts and edges carry similarity weights to evaluate stance alignment.
+
+The *friendship network* [4] calculates the significance of friendship and relationships of each social media user. Vertices represent users and edges encode friendship strength; clustering coefficients quantify local connectivity.
+
+The *clustering coefficient* measures the strength of the friendship of each user in each vertex v ∈ V [3]. For instance, social media users with a large number of followers would have a relatively high clustering coefficient, whereas social media users with no followers who do not follow any other social media users would have very low clustering coefficients.
+
+A social media user with a high clustering coefficient is deemed more trustworthy, whereas it would be acceptable to assume that an individual piece of news is irrelevant when news comes from a social media user with a very low clustering coefficient. Thus, it is safe to classify all news from social media users with very low clustering coefficients as fake news.
+
+The *diffusion networks* [4] extend these ideas by tracing how information propagates among users.
+
+## AN ALTERNATIVE MACHINE LEARNING ALGORITHM
+
+*Fake news detection* algorithms were validated on three aforementioned datasets [4, 11]. The first dataset, the *FacebookData* dataset, is a proprietary dataset, and the other two open-source datasets were provided by an independent, fact-checking website, www.fakenews.net [3].
+
+The *FacebookData* dataset consisted of 8923 fake posts with 6577 real posts, 14 fake conspiracy pages with 18 real scientific pages, and more than 230,000 likes from 909,236 Facebook users [3].
+
+There are 240 *news sources* for the *PolitiFact* dataset and 182 *news sources* for the *BuzzFeedData* dataset, with half of the *news sources* being true and half being false [11].
+
+In this paper, an alternative machine learning algorithm, the SVM algorithm, was implemented on the *BuzzFeedData* dataset for the binary classification of data in an *n-dimensional space* using the R programming language.
+
+The visualization of the *Category* attribute with respect to the *Rating* attribute of the *BuzzFeedData* dataset using the R programming language is shown in Figure 1. The visualization of the *Page* attribute with respect to the *Rating* attribute of the *BuzzFeedData* dataset using the R programming language is shown in Figure 2.
+
+The *Category* attribute indicates whether the piece of news is considered *mainstream*, *right-leaning*, or *left-leaning*. The news sources ABC News Politics, CNN Politics, and Politico are considered mainstream media in the *Page* attributes. The news sources Addicting Info, Occupy Democrats, and The Other 98% are considered left-leaning. The news sources Eagle Rising, Freedom Daily, and Right Wing News are considered right-leaning.
+
+The SVM algorithm trained on the social features of the *Rating* attribute, the *share count* attribute, the *reaction count* attribute, and the *comment count* attribute using the R programming language, and those attributes are shown in Figure 3 [11].
+
+The support vector classification (SVC) method evaluates the performance based on accuracy, precision, recall, and F1 score on the attributes of *Rating*, *share count*, *reaction count*, and *comment count* of the *BuzzFeedData* dataset.
+
+Those attributes are the support vectors in the SVM algorithm. The *hyperplane* of the SVC method is separated by a *linear* or *nonlinear* decision boundary for this binary classification method [13].
+
+In the SVC method, a *hyperplane* was constructed for *nonlinear decision boundaries*. When the decision boundary is *nonlinear*, a *kernel function*, also known as a *kernel trick*,
+
+K (x, x′) = < h(x), h(x′) >
+
+finds a solution for a *hyperplane* by taking the *nonlinear decision boundaries* into consideration. The hyperplane could help classify whether information is factual or not, with:
+
+- x, the *variables*
+- w, the *support vectors*
+- a *set of points* b ∈ B,
+- s.t. H = { x | x + b = 0 }
+
+The *margin* is the *distance* between γ, the *weight* between the hyperplane, and w, the *positive* support vectors or the *negative* support vectors in the SVM algorithm; the higher the value of the weight γ, the shorter the distance of w, the support vectors to the hyperplane [15].
+
+In this paper, the SVC method was implemented using the R programming language with the e1071 package based on the social-based features of the *BuzzFeedData* dataset [11]. The R programming language was used to evaluate the results of the confusion matrices of the linear kernel, the polynomial kernel, the radial basis kernel, and the sigmoid kernel to determine which kernel function is suitable for tuning the SVM algorithm [15, 16].
+
+Below is the implementation of the radial basis kernel with a 10-fold cross-validation and tuning of parameters using the R programming language.
+
+```r
+reposts <- read.csv("normal-facebookdata.csv")
+share_count <- reposts$share_count
+reaction_count <- reposts$reaction_count
+comment_count <- reposts$comment_count
+Rating <- reposts$Rating
+svm <- svm(Rating ~., data=train, kernel = 'radial')
+summary(svm)
+svm_tune <- tune.svm(Rating~., data=train, kernel='radial', 
+                     gamma = seq(1/2^nrow(reposts), 1, .01), 
+                     cost = 2^seq(-6, 4, 2))
+svm_tune
+tuned.svm <- svm(Rating~., data=train, kernel='radial', gamma=0.08, cost=16)
+summary(tuned.svm)
+svm_pred <- predict(tuned.svm, test[,4])
+table(pred = svm_pred, true = test[,4])
+```
+
+The *regularization parameter* is the *cost parameter* C for the *radial basis function kernel* instead of the typical regularization parameter λ for cross-validation [16].
+
+The two *tuning parameters* for the *radial basis kernel function* are the *cost parameter* C and the *gamma* γ, respectively; as the *values* of C and γ increase, the model becomes overfitted.
+
+The *cost parameter C* is 16, and the *gamma* γ is 0.08 for the radial basis kernel function with a 10-fold cross-validation on the *BuzzFeedNews* dataset.
+
+## CONCLUSION AND FUTURE RESEARCH
+
+Every individual piece of published news is a potential hoax that could destroy lives. As these posts pose an imminent threat to the global world, it is necessary to implement *fake news* detection algorithms using machine learning methods to contain the propagation of *fake news* [1, 12]. Therefore, it is of the utmost importance to mitigate pernicious damage from the proliferation, propagation, and rapid diffusion of *fake news* for pecuniary and ideological reasons [11, 12].
+
+These tasks can be completed by implementing the *fake news* detection algorithms of the content-based (CB) method, the logistic regression (LR) method, the harmonic boolean label crowdsourcing (HC) algorithm, and the SVM algorithm to identify *fake news* in online social media [1, 19].
+
+One of the most important aspects of *fake news* detection algorithms is that the solution must be as *accurate* and *precise* as possible to locate all *fake news*.
+
+The logistic regression (LR) method, the harmonic boolean label crowdsourcing (HC) algorithm, and the SVM algorithm are based on social features instead of content-based features [3].
+
+When the number of likes or the threshold λ is higher than 5, both the logistic regression (LR) approach and the harmonic boolean-label crowdsourcing (HC) algorithm achieve an accuracy of more than 80% [1].
+
+The harmonic boolean label crowdsourcing (HC) algorithm has an accuracy exceeding 99.4% even when the training sets are 0.5% of the full dataset [1, 3].
+
+The purpose of implementing machine learning algorithms is to detect *fake news* accurately and precisely with absolutely no room for error.
+
+In the immediate future, the direction and purpose of research on *fake news* detection algorithms strongly depend on the calculation of the predicate values of true positives, true negatives, false positives, and false negatives [4].
+
+There are algorithms that could produce a solution with accuracy and precision exceeding 99.5% in the field of artificial intelligence [1, 12].
+
+## References
+
+1. M. L. Della Vedova, E. Tacchini, S. Moret, G. Ballarin, M. DiPierro, L. de Alfaro. "Automatic Online Fake News Detection Combining Content and Social Signals," in *Proc. 22nd Conf. Open Innovations Assoc*., Jyvaskyla, Finland, May 2018, pp.272-279.
+
+2. N. Hassan, C. Li, and M. Tremayne. "Detecting Check-worthy Factual Claims in Presidential Debates", in Proc. 24th ACM International on Conference on Information and Knowledge Management. ACM, New York, NY, USA, 1835--1838.
+
+3. E. Tacchini, G. Ballarin, M. L. Della Vedova, S. Moret, and L. de Alfaro, "Some Like it Hoax: Automated Fake News Detection in Social Networks," in *Proc. 2nd Workshop Data Science for Social Good*, vol. 1960. Skopje, North Macedonia: CEUR-WS, 2017.
+
+4. K. Shu, A. Sliva, S. Wang, J. Tang, and H. Liu, "Fake news detection on social media: A data mining perspective," ACM SIGKDD *Explorations Newsletter*, vol. 19, no. 1, pp. 22-36, 2017.
+
+5. L. de Alfaro, V. Polychronopoulos and M. Shavlovsky, "Reliable Aggregation of Boolean Crowdsourced Tasks", in *Proc 3rd AAAI Human Computation and Crowdsourcing*, San Diego CA, Nov 2015.
+
+6. C. Castillo, M. Mendoza and B. Poblete, "Information credibility on twitter", in *Proc. 20th Int. Conf. World Wide Web*, Hyderabad India, Mar 2011, pp. 675-684, 2011.
+
+7. J. C. Hernandez, C. J. Hernandez, J. M. Sierra and A. Ribagorda, "A first step towards automatic hoax detection", in Proc. 36th Annu. Int. 2002 Carnahan Conf. on Secur. Technol., Atlantic City, New Jersey, Oct 2002, pp. 102-114.
+
+8. H. Allcott and M. Gentzkow, "Social Media and Fake News in the 2016 Election", Journal of Economic Perspectives, vol. 31, no. 2, pp. 211-236, May 2017.
+
+9. A. Gupta, H. Lamba and P. Kumaraguru, "$1.00 per RT #Boston-Marathon #PrayForBoston: Analyzing fake content on Twitter" in 2013 APWG eCrime Researchers Summit, pp. 1-12, Sep. 2013.
+
+10. A. Bessi, M. Coletto, G. A. Davidescu, A. Scala, G. Caldarelli and W. Quattrociocchi, "Science vs Conspiracy: Collective Narratives in the Age of Misinformation", PLOS ONE, vol. 10, no. 2, pp. e0118093, Feb. 2015.
+
+11. C. Silverman, L. Strapagiel, H. Shaban, E. Hall, and J. Singer-Vine, "Hyperpartisan Facebook Pages Are Publishing False And Misleading Information At An Alarming Rate," BuzzFeed News, Oct 2016. [Online]. Available: https://www.buzzfeednews.com
+
+12. V. Rubin, N. Conroy, Y. Chen, S. Cornwell, "Fake News or Truth? Using Satirical Cues to Detect Potentially Misleading News", in *Proc. 2nd Workshop Comput. Approaches to Deception Detection Assoc. for Comput. Linguistics*, 2016.
+
+13. T. Khan, A. Michalas, "Trust and Believe -- Should we? Evaluating the Trustworthiness of Twitter Users", in *Proc 19th Int. Conf. Trust, Security, and Privacy Comput. And Commun.*, 2020.
+
+14. M. Pérez-Ortiz, S. Jiménez-Fernández, P. Gutiérrez, E. Alexandre, C. Hervás-Martínez, and S. Salcedo-Sanz, "A Review of Classification Problems and Algorithms in Renewable Energy Applications," Energies, vol. 9, no. 8, p. 607, Aug. 2016.
+
+15. W. S. Noble, "What is a support vector machine?," Nat. Biotechnol, vol. 24, no. 12, pp. 1565--1567, 2006.
+
+16. P. Samui, S. S. Roy, and V. E. Balas, "Chapter 27 - Support Vector Machine: Principles, Parameters, and Applications," in Handbook of neural computation, London: Academic Press, 2017, pp. 515--513.
+
+17. N. Conroy, V. Rubin, and Y. Chen. "Automatic deception detection: Methods for finding fake news", in *Proc Assoc. for Information Science and Technology*, 52(1):1-4, 2015.
+
+18. J. Furnkranz. "A Study Using n-gram Features for Text Categorization". *Austrian Research Institute for Artificial Intelligence*, 3(1998):1-10, 1998.
+
+19. M. Del Vicario, A. Bessi, F. Zollo, F. Petroni, A. Scala, G. Caldarelli, et al., "The spreading of misinformation online", in *Proc. Nat. Acad. Sci.*, vol. 113, no. 3, pp. 554-559, Jan. 2016.
+
+20. Z. Jin, J. Cao, Y. Zhang and J. Luo, "News Verification by Exploiting Conflicting Social Viewpoints in Microblogs." in AAAI, pp. 2972-2978, 2016.
